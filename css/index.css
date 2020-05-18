@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 32pt;
+}
+
+p {
+    font-size: 14pt;
+}
+
+a {
+    font-size: 14pt;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: red;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: white;
+    display:flex;
+}
+
+header div:first-child {
+    margin-right: auto;
+}
+
+#header-title {
+    height: 80px;
+    width: 200px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#header-title a {
+    font-size: 18pt;
+}
+
+#header-menu {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#header-menu ul {
+    list-style: none;
+    display:flex;
+}
+
+#header-menu li {
+    width: 120px;
+}
+
+#toggle-button {
+    width: 80px;
+    height: 80px;
+    display: none;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+#toggle-menu ul {
+    list-style: none;
+    background-color: white;
+}
+
+#toggle-menu li {
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: white;
+}
+
+#profile {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-image {
+    width: 20%;
+    height: auto;
+}
+
+#profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+#profile-text {
+    margin-left: 32px;
+    width: auto;
+}
+
+#social-accounts {
+    text-align: center;
+}
+
+.social-icon {
+    font-size: 28pt;
+    color: gray;
+    padding: 16px;
+}
+
+#works-container {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+
+    display: grid;
+    gap: 32px;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.work {
+    background-color: black;
+    height: 320px;
+    position: relative;
+}
+
+.work img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.work-title {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+}
+
+.work-title h2 {
+    color: white;
+}
+
+.work-description {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+}
+
+.work-description p {
+    color: white;
+    font-size: 12pt;
+}
+
+#contact {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+#contact iframe {
+    width: 100%;
+    height: 960px;
+}
+
+footer {
+    height: 80px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 12pt;
+}
+
+/* タブレットやスマホ向け */
+
+@media screen and (max-width: 959px) {
+    /* 959px以下に適用されるCSS（タブレット用） */
+    h1 {
+        font-size: 24pt;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+
+    #header-menu {
+        display: none;
+    }
+
+    #toggle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+    h1 {
+        font-size: 24pt;
+    }
+
+    p {
+        font-size: 12pt;
+    }
+
+    #header-menu {
+        display: none;
+    }
+
+    #toggle-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 10pt;
+    }
+}
